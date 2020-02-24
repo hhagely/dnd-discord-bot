@@ -9,6 +9,9 @@ lerna-debug.log*
 # leave out auth js file. SENSITIVE information
 auth.js
 
+# do not check our database file into git
+db_dnd-helper.sqlite
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
