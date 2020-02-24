@@ -1,15 +1,16 @@
 const { AkairoClient } = require('discord-akairo');
+const auth = require('./auth');
 
 const client = new AkairoClient(
   {
     ownerID: '144606974758092801',
     prefix: '~',
-    commandDirectory: '/commands',
+    commandDirectory: './commands',
+    listenerDirectory: './listeners',
   },
   {
     disableEveryone: false,
   }
 );
-const auth = require('./auth');
 
 client.login(auth.token);
