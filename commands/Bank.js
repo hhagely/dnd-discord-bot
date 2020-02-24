@@ -37,7 +37,11 @@ class Bank extends Command {
       where: { campaign: { [Op.like]: args.campaign } },
     });
 
-    const channel = message.guild.channels.find(c => c.name === 'bot-testing');
+    const channel = message.guild.channels.find(
+      c =>
+        c.name === 'party-bank-vault' &&
+        c.parent.name.toLowerCase().includes(args.campaign)
+    );
 
     const messageAuthorNick = message.member.nickname;
 
