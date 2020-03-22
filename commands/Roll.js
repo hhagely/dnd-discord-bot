@@ -46,9 +46,6 @@ class Roll extends Command {
       modAmount = parseInt(modifier.substr(1));
       // eslint-disable-next-line no-eval
       rollSum = eval(`${rollSum} ${modifier}`);
-      if (rollSum < 1) {
-        rollSum = 1;
-      }
     }
 
     const embed = this.buildEmbed(
