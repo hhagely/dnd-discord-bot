@@ -44,8 +44,8 @@ class Roll extends Command {
     let modAmount;
     if (modifier !== undefined) {
       modAmount = parseInt(modifier.substr(1));
-      rollSum += modAmount;
-      // diceRolls.push(modAmount);
+      // eslint-disable-next-line no-eval
+      rollSum = eval(`${rollSum} ${modifier}`);
     }
 
     const embed = this.buildEmbed(
